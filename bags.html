@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bags - BrandShop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <!-- Header with Two-Line Navbar -->
+    <header class="bg-white shadow">
+      <!-- First Line -->
+      <div class="flex flex-wrap items-center justify-between p-1 gap-3">
+        <div class="flex items-center space-x-2">
+          <a href="#" class="flex items-center space-x-2 px-9"
+            ><img
+              alt="Brand Logo"
+              class="h-10 w-30"
+              src="data:image/png;base64,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"
+          /></a>
+        </div>
+        <div class="w-full lg:w-auto flex-grow flex justify-center">
+          <div
+            class="flex items-center border-2 border-blue-400 rounded-lg overflow-hidden w-full max-w-xl"
+          >
+            <input
+              id="searchInput"
+              class="focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 p-2 text-sm flex-grow cursor-pointer"
+              placeholder="Search products..."
+              type="text"
+            />
+            <select
+              id="categorySelect"
+              class="cursor-pointer focus:outline-none h-full px-3 text-md text-gray-600 border-l border-blue-400 bg-white"
+            >
+              <option value="all">All Categories</option>
+              <option value="clothing">Clothing</option>
+              <option value="shoes">Shoes</option>
+              <option value="furniture">Furniture</option>
+              <option value="perfumes">Perfumes</option>
+              <option value="electronics">Electronics</option>
+            </select>
+            <button
+              id="searchBtn"
+              class="bg-blue-500 text-white h-full px-4 text-sm font-medium flex items-center justify-center"
+              type="button"
+              aria-label="Search"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="w-full lg:w-auto flex items-center space-x-6 text-sm text-gray-500 justify-center lg:justify-end"
+        >
+          <a
+            href="/account"
+            class="flex flex-col items-center hover:text-blue-600 transition"
+            aria-label="Account Profile"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-user"
+              aria-hidden="true"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle></svg
+            ><span class="mt-1">Profile</span></a
+          ><a
+            href="/messages.html"
+            class="flex flex-col items-center hover:text-blue-600 transition"
+            aria-label="Messages"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-message-square"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+              ></path></svg
+            ><span class="mt-1">Message</span></a
+          ><a
+            href="/orders"
+            class="flex flex-col items-center hover:text-blue-600 transition"
+            aria-label="My Orders"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-heart"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+              ></path></svg
+            ><span class="mt-1">Orders</span></a
+          ><a
+            id="openCart"
+            class="relative flex flex-col items-center hover:text-blue-600 transition"
+            aria-label="Shopping Cart"
+          >
+            <div
+              id="cartCount"
+              class="hidden absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full"
+            ></div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-shopping-cart"
+              aria-hidden="true"
+            >
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path
+                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+              ></path></svg
+            ><span class="mt-1">My cart</span></a
+          >
+        </div>
+
+        <!-- Icons Row (Cart, Wishlist, Profile etc.) -->
+        <div class="flex items-center gap-6 text-gray-700 text-xl">
+          <button class="hover:text-blue-600">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="hover:text-blue-600">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="hover:text-blue-600">
+            <i class="fas fa-bell"></i>
+          </button>
+          <button class="hover:text-blue-600">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Line -->
+      <div class="bg-white-50 border-t">
+        <div
+          class="container mx-auto px-4 py-2 flex flex-col lg:flex-row flex-wrap items-start lg:items-center justify-between gap-2 lg:gap-0"
+        >
+          <!-- Left Navigation -->
+          <nav
+            class="flex flex-wrap gap-4 lg:gap-6 text-gray-700 font-medium w-full lg:w-auto"
+          >
+            <!-- Toggle Button for Small Screens -->
+            <a
+              href="#"
+              id="toggleSidebar"
+              class="mobile-only text-gray-700 hover:text-blue-600 font-bold text-lg"
+            >
+              ☰ Categories
+            </a>
+
+            <a href="index.html" class="text-blue-600 font-semibold underline">
+              Home
+            </a>
+            <a href="#" class="hover:text-blue-600">Deals</a>
+            <a href="#" class="hover:text-blue-600">New Arrivals</a>
+            <a href="#" class="hover:text-blue-600">Trending</a>
+            <a href="#" class="hover:text-blue-600">Support</a>
+          </nav>
+
+          <!-- Right Side Dropdowns -->
+          <div
+            class="flex items-center gap-3 w-full lg:w-auto justify-start lg:justify-end"
+          >
+            <select class="border rounded px-3 py-1 bg-white w-full sm:w-auto">
+              <option>Account</option>
+              <option>Orders</option>
+              <option>Settings</option>
+            </select>
+
+            <select class="border rounded px-3 py-1 bg-white w-full sm:w-auto">
+              <option>Germany 🇩🇪</option>
+              <option>English 🇬🇧</option>
+              <option>French 🇫🇷</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Sidebar + Center Images + Right Vertical Images -->
+    <section
+      class="container m-5 bg-white mx-auto px-4 py-2 grid grid-cols-12 gap-6"
+    >
+      <!-- Toggle Button for Small Screens this is above in header button and logic in js code -->
+
+      <!-- LEFT SIDEBAR MENU -->
+      <aside
+        id="sidebarMenu"
+        class="col-span-12 md:col-span-3 bg-white shadow rounded-lg p-4 hidden md:block"
+      >
+        <h3 class="text-lg font-bold mb-4">Categories</h3>
+        <ul id="categoryLists" class="space-y-3 text-gray-700">
+          <li
+            data-cat="headphones"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Headphones
+          </li>
+          <li
+            data-cat="electronics"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Electronics
+          </li>
+          <li
+            data-cat="laptops"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Laptops
+          </li>
+          <li
+            data-cat="mobiles"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Mobiles
+          </li>
+          <li
+            data-cat="chargers"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Chargers
+          </li>
+          <li
+            data-cat="cameras"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Cameras
+          </li>
+          <li
+            data-cat="smartwatches"
+            class="category-item cursor-pointer hover:bg-sky-100 p-2 rounded"
+          >
+            Smartwatches
+          </li>
+        </ul>
+      </aside>
+
+      <!-- CENTER HERO IMAGE SECTION -->
+      <div class="col-span-12 md:col-span-6">
+        <div
+          class="relative bg-teal-50 sm:rounded-lg overflow-hidden h-[240px] lg:h-[420px]"
+        >
+          <!-- IMAGE -->
+          <img
+            id="heroImage"
+            class="h-full w-full object-cover"
+            src=""
+            alt=""
+          />
+
+          <!-- TEXT OVERLAY -->
+          <div
+            class="absolute inset-0 flex flex-col justify-start items-start p-6 lg:p-10"
+          >
+            <h2
+              id="heroTitle"
+              class="text-2xl lg:text-4xl mb-4 text-black mt-4"
+            ></h2>
+            <button
+              id="heroBtn"
+              class="bg-white text-blue-500 font-semibold my-8 px-6 py-2 rounded-lg shadow hover:bg-gray-100 transition"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT VERTICAL IMAGE MENU -->
+      <div class="bg-white col-span-12 md:col-span-3 flex flex-col gap-4">
+        <!-- PROFILE SECTION -->
+        <div class="bg-gray-100 shadow rounded-lg p-4 flex flex-col gap-4">
+          <!-- TOP SECTION: IMAGE + TWO-LINE TEXT (HORIZONTAL) -->
+          <div class="flex items-center gap-3">
+            <img
+              src="https://via.placeholder.com/120"
+              class="rounded-full shadow w-14 h-14 object-cover"
+            />
+
+            <div class="flex flex-col leading-tight">
+              <h3 class="text-lg font-semibold">Hi User</h3>
+              <p class="text-gray-600 text-sm">Customer / Visitor</p>
+            </div>
+          </div>
+
+          <!-- BOTTOM SECTION: TWO LONG VERTICAL BUTTONS -->
+          <div class="flex flex-col gap-0 w-full">
+            <button
+              class="px-4 py-2 bg-blue-600 text-white rounded-lg w-full text-center"
+            >
+              Login
+            </button>
+            <button
+              class="px-4 py-2 bg-white text-blue-600 rounded-lg w-full text-center"
+            >
+              Signup
+            </button>
+          </div>
+        </div>
+
+        <!-- TEXT BOX 1 -->
+        <div class="shadow rounded-lg p-4 bg-orange-400 text-white">
+          <h4 class="font-bold mb-2">Special Deals</h4>
+          <p class="text-sm opacity-90">
+            Get up to 50% off on top categories today only.
+          </p>
+        </div>
+
+        <!-- TEXT BOX 2 -->
+        <div class="shadow rounded-lg p-4 bg-sky-400 text-white">
+          <h4 class="font-bold mb-2">New Arrivals</h4>
+          <p class="text-sm opacity-90">
+            Check out the latest trending items this week.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deal and Offer Section -->
+    <div class="p-1">
+      <div
+        class="container m-1 bg-white mx-auto px-4 py-2 grid rounded-lg shadow-md"
+      >
+        <!-- Horizontal Scroll Wrapper -->
+        <div class="overflow-x-auto scrollbar-hide">
+          <!-- FLEX ON MOBILE / GRID ON BIG -->
+          <div
+            class="flex space-x-4 sm:grid sm:grid-cols-3 md:grid-cols-6 gap-4"
+          >
+            <!-- OFFER BOX -->
+            <div
+              class="min-w-[150px] bg-white border rounded-lg p-4 flex flex-col justify-between h-48"
+            >
+              <div>
+                <h2 class="text-lg font-bold text-gray-900 leading-tight">
+                  Deals & Offers
+                </h2>
+                <p class="text-sm text-gray-500 -mt-1">Electronics Sale</p>
+              </div>
+
+              <div id="timer" class="flex justify-between mt-3">
+                <div class="text-center bg-gray-100 px-3 py-1 rounded">
+                  <span id="hours" class="text-lg font-bold text-gray-800"
+                    >00</span
+                  >
+                  <p class="text-xs text-gray-500">Hrs</p>
+                </div>
+                <div class="text-center bg-gray-100 px-3 py-1 rounded">
+                  <span id="minutes" class="text-lg font-bold text-gray-800"
+                    >00</span
+                  >
+                  <p class="text-xs text-gray-500">Min</p>
+                </div>
+                <div class="text-center bg-gray-100 px-3 py-1 rounded">
+                  <span id="seconds" class="text-lg font-bold text-gray-800"
+                    >00</span
+                  >
+                  <p class="text-xs text-gray-500">Sec</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRODUCT BOXES -->
+            <div
+              class="min-w-[150px] bg-white border rounded-lg p-4 flex flex-col items-center h-48"
+            >
+              <img
+                src="https://thumbs.dreamstime.com/b/apple-watch-mm-silver-stainless-steel-cellular-top-frontal-view-white-background-official-apps-face-oled-screen-leather-139255806.jpg"
+                class="h-24 object-contain mb-2"
+              />
+              <p class="text-sm font-medium text-gray-700 text-center">
+                Smart Watch
+              </p>
+              <span
+                class="mt-2 bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full"
+                >-25%</span
+              >
+            </div>
+
+            <div
+              class="min-w-[150px] bg-white border rounded-lg p-4 flex flex-col items-center h-48"
+            >
+              <img
+                src="https://img.freepik.com/premium-photo/white-headphones-white-background-front-view-3d-rendering_187882-2883.jpg"
+                class="h-24 object-contain mb-2"
+              />
+              <p class="text-sm font-medium text-gray-700 text-center">
+                Headphones
+              </p>
+              <span
+                class="mt-2 bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full"
+                >-25%</span
+              >
+            </div>
+
+            <div
+              class="min-w-[150px] bg-white border rounded-lg p-4 flex flex-col items-center h-48"
+            >
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/006/839/635/small/laptop-computer-notebook-with-blank-screen-on-white-background-free-photo.jpg"
+                class="h-24 object-contain mb-2"
+              />
+              <p class="text-sm font-medium text-gray-700 text-center">
+                Laptop
+              </p>
+              <span
+                class="mt-2 bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full"
+                >-25%</span
+              >
+            </div>
+
+            <div
+              class="min-w-[150px] bg-white border rounded-lg p-4 flex flex-col items-center h-48"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1y9yN5RcIn128eRPMnKj8d_wdB8-zeThsKQ&s"
+                class="h-24 object-contain mb-2"
+              />
+              <p class="text-sm font-medium text-gray-700 text-center">
+                Camera
+              </p>
+              <span
+                class="mt-2 bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full"
+                >-25%</span
+              >
+            </div>
+
+            <div
+              class="min-w-[150px] bg-white border rounded-lg p-4 flex flex-col items-center h-48"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrC0Pyx84G7jqcVyZsROlPMPOWBxEeraeutQ&s"
+                class="h-24 object-contain mb-2"
+              />
+              <p class="text-sm font-medium text-gray-700 text-center">
+                Speakers
+              </p>
+              <span
+                class="mt-2 bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full"
+                >-25%</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Section -->
+    <section
+      class="container m-4 bg-white mx-auto px-4 py-2 rounded-lg shadow-md"
+    >
+      <div class="flex flex-col md:flex-row gap-4">
+        <!-- SECTION 1 — LEFT -->
+        <div
+          class="w-full md:w-1/3 lg:w-1/4 h-80 relative rounded-lg overflow-hidden shadow-md"
+        >
+          <!-- Background Image -->
+          <img
+            src="https://i.pinimg.com/736x/a2/b9/2c/a2b92cff0c8e99b9152a024173c402e7.jpg"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <!-- Text + Buttons -->
+          <div
+            class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start p-6 text-white"
+          >
+            <h2 class="text-2xl font-bold mb-2">Home and Outdoor</h2>
+            <p class="text-sm mb-4">home and outdoor</p>
+
+            <button
+              class="bg-white text-black px-4 py-2 rounded-md font-semibold mb-2"
+            >
+              Shop Now
+            </button>
+            <button
+              class="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- SECTION 2 — RIGHT -->
+        <div class="w-full md:w-2/3 lg:w-3/4 bg-white rounded-lg shadow-md p-4">
+          <!-- Row 1 -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-3"
+          >
+            <!-- Product 1 -->
+            <div
+              class="bg-white border rounded-lg p-4 flex items-center justify-between gap-3 h-24"
+            >
+              <div>
+                <p class="text-sm font-medium text-gray-700">Headphones</p>
+                <span
+                  class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+                  >-25%</span
+                >
+              </div>
+              <img
+                src="https://img.freepik.com/premium-photo/white-headphones-white-background-front-view-3d-rendering_187882-2883.jpg"
+                class="h-16 w-16 object-contain"
+              />
+            </div>
+
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 2
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 3
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 4
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 5
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"
+          >
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 6
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 7
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 8
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 9
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 10
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section-2 -->
+    <section
+      class="container m-4 bg-white mx-auto px-4 py-2 rounded-lg shadow-md"
+    >
+      <div class="flex flex-col md:flex-row gap-4">
+        <!-- SECTION 1 — LEFT -->
+        <div
+          class="w-full md:w-1/3 lg:w-1/4 h-80 relative rounded-lg overflow-hidden shadow-md"
+        >
+          <!-- Background Image -->
+          <img
+            src="https://media.istockphoto.com/id/1309971069/vector/set-of-graphic-phone-accessories-flat-vector-illustration.jpg?s=612x612&w=0&k=20&c=jaI28OlU9Rg8mxy-C8VvkGpoA8_7AkFHDewgt8ILITQ="
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <!-- Text + Buttons -->
+          <div
+            class="absolute inset-0 bg-black/40 flex flex-col justify-center items-start p-6 text-white"
+          >
+            <h2 class="text-2xl font-bold mb-2">Home and Outdoor</h2>
+            <p class="text-sm mb-4">home and outdoor</p>
+
+            <button
+              class="bg-white text-black px-4 py-2 rounded-md font-semibold mb-2"
+            >
+              Shop Now
+            </button>
+            <button
+              class="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- SECTION 2 — RIGHT -->
+        <div class="w-full md:w-2/3 lg:w-3/4 bg-white rounded-lg shadow-md p-4">
+          <!-- Row 1 -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-3"
+          >
+            <!-- Product 1 -->
+            <div class="bg-white border rounded-lg p-4 flex items-center gap-2">
+              <!-- Left: Text + Discount -->
+              <div class="flex flex-col justify-center">
+                <p class="text-sm font-medium text-gray-700">Headphones</p>
+                <span
+                  class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+                >
+                  -25%
+                </span>
+              </div>
+
+              <!-- Right: Image -->
+              <img
+                src="https://img.freepik.com/premium-photo/white-headphones-white-background-front-view-3d-rendering_187882-2883.jpg"
+                class="h-20 w-20 object-contain"
+              />
+            </div>
+
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 2
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 3
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 4
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 5
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"
+          >
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 6
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 7
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 8
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 9
+            </div>
+            <div class="border rounded-lg p-3 flex items-center justify-center">
+              Prod 10
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Inquiry or contact Section-->
+    <section
+      class="container m-4 bg-white mx-auto px-4 py-2 rounded-lg relative bg-cover bg-center shadow-md"
+      style="
+        background-image: url('https://i.postimg.cc/RhRgTJH5/Group-982.png');
+      "
+    >
+      <div class="rounded-lg p-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- LEFT: Text -->
+          <div
+            class="md:w-1/2 text-white flex flex-col justify-center space-y-3"
+          >
+            <h3 class="text-2xl font-bold">Get in Touch</h3>
+            <p class="text-lg">We would love to hear from you.</p>
+            <p class="text-lg">Our team is here to answer your questions.</p>
+            <p class="text-lg">Feel free to send us a message anytime!</p>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div class="md:w-1/2 bg-white rounded-lg p-6 shadow-md">
+            <form class="space-y-4">
+              <p class="text-lg">Feel free to send us a message anytime!</p>
+              <div>
+                <label class="block text-gray-700 mb-1" for="name">Name</label>
+                <input
+                  class="w-full border border-gray-300 rounded px-3 py-2"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-1" for="email"
+                  >Email</label
+                >
+                <input
+                  class="w-full border border-gray-300 rounded px-3 py-2"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-1" for="message"
+                  >Message</label
+                >
+                <textarea
+                  class="w-full border border-gray-300 rounded px-3 py-2"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <div class="text-left">
+                <button
+                  class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Recommended Items / All Items-->
+    <section
+      class="container m-4 bg-white mx-auto px-4 py-6 rounded-lg shadow-md"
+    >
+      <h2 class="text-2xl font-bold mb-4">Recommended Items</h2>
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+      >
+        <!-- Product Card 1 -->
+        <div
+          class="bg-white border rounded-lg p-4 flex items-center justify-between gap-3"
+        >
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-medium text-gray-700">Headphones</p>
+            <span
+              class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+              >-25%</span
+            >
+          </div>
+          <img
+            src="https://img.freepik.com/premium-photo/white-headphones-white-background-front-view-3d-rendering_187882-2883.jpg"
+            class="h-16 w-16 object-contain"
+          />
+        </div>
+
+        <!-- Product Card 2 -->
+        <div
+          class="bg-white border rounded-lg p-4 flex items-center justify-between gap-3"
+        >
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-medium text-gray-700">Smart Watch</p>
+            <span
+              class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+              >-30%</span
+            >
+          </div>
+          <img
+            src="https://thumbs.dreamstime.com/b/apple-watch-mm-silver-stainless-steel-cellular-top-frontal-view-white-background-official-apps-face-oled-screen-leather-139255806.jpg"
+            class="h-16 w-16 object-contain"
+          />
+        </div>
+
+        <!-- Product Card 3 -->
+        <div
+          class="bg-white border rounded-lg p-4 flex items-center justify-between gap-3"
+        >
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-medium text-gray-700">Laptop</p>
+            <span
+              class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+              >-15%</span
+            >
+          </div>
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/006/839/635/small/laptop-computer-notebook-with-blank-screen-on-white-background-free-photo.jpg"
+            class="h-16 w-16 object-contain"
+          />
+        </div>
+
+        <!-- Product Card 4 -->
+        <div
+          class="bg-white border rounded-lg p-4 flex items-center justify-between gap-3"
+        >
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-medium text-gray-700">Camera</p>
+            <span
+              class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+              >-20%</span
+            >
+          </div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1y9yN5RcIn128eRPMnKj8d_wdB8-zeThsKQ&s"
+            class="h-16 w-16 object-contain"
+          />
+        </div>
+
+        <!-- Product Card 5 -->
+        <div
+          class="bg-white border rounded-lg p-4 flex items-center justify-between gap-3"
+        >
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-medium text-gray-700">Speaker</p>
+            <span
+              class="mt-1 bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full w-fit"
+              >-25%</span
+            >
+          </div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrC0Pyx84G7jqcVyZsROlPMPOWBxEeraeutQ&s"
+            class="h-16 w-16 object-contain"
+          />
+        </div>
+
+        <!-- Repeat more products as needed -->
+      </div>
+    </section>
+
+    <!--All Products-->
+    <section class="container bg-white mx-auto px-4 rounded-lg shadow-md">
+      <div class="py-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold">All Products</h2>
+          <div class="text-sm text-gray-600">
+            Showing <span id="productCount">0</span> products
+          </div>
+        </div>
+
+        <div
+          id="productGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
+      </div>
+    </section>
+
+    <!-- CART POPUP -->
+    <div
+      id="cartPopup"
+      class="fixed bottom-6 right-6 bg-white rounded-lg shadow p-4 w-72 hidden z-50"
+    >
+      <div class="flex justify-between items-center">
+        <h4 class="font-semibold">Cart</h4>
+        <button id="closeCart" class="text-gray-500">✖</button>
+      </div>
+      <div id="cartItems" class="mt-2 max-h-40 overflow-y-auto text-sm"></div>
+      <div class="mt-3 flex gap-2">
+        <a
+          href="cart.html"
+          class="flex-1 bg-blue-600 text-white py-2 rounded text-center"
+          >View cart</a
+        >
+        <button id="clearCart" class="px-3 py-2 rounded border">Clear</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-sky-600 text-white mt-10">
+      <div
+        class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <!-- 1. Logo / About -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-white">Brand</h2>
+          <p class="text-white text-sm">
+            Your one-stop shop for electronics, gadgets, and accessories.
+            Quality products at the best prices.
+          </p>
+          <div class="flex space-x-3">
+            <a href="#" class="hover:text-white"
+              ><i class="fab fa-facebook-f"></i> Facebook</a
+            >
+            <a href="#" class="hover:text-white"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+            <a href="#" class="hover:text-white"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+          </div>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <ul class="space-y-2 text-white">
+            <li><a href="#" class="hover:text-white">Home</a></li>
+            <li><a href="#" class="hover:text-white">Shop</a></li>
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Customer Support -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">
+            Customer Support
+          </h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Help Center</a></li>
+            <li>
+              <a href="#" class="hover:text-white">Shipping & Delivery</a>
+            </li>
+            <li><a href="#" class="hover:text-white">Returns & Refunds</a></li>
+            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Newsletter -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold text-white mb-3">
+            Subscribe to our Newsletter
+          </h3>
+          <p class="text-sm">
+            Get updates on latest products, offers, and promotions.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-2">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="w-full px-4 py-2 rounded-md text-gray-900 focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-md font-semibold hover:bg-yellow-400 transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div
+        class="border-t border-gray-800 mt-8 py-4 text-center text-white text-sm"
+      >
+        © 2025 Brand. All rights reserved.
+      </div>
+    </footer>
+
+    <!--JS file-->
+    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

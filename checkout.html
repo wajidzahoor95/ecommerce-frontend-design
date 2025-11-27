@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Checkout - BrandShop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center space-x-2 px-9"
+          ><img
+            alt="Brand Logo"
+            class="h-10 w-30"
+            src="data:image/png;base64,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"
+        /></a>
+        <a href="cart.html" class="text-gray-600 hover:text-blue-600 text-sm"
+          >← Back to Cart</a
+        >
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6">
+      <h1 class="text-2xl font-bold mb-6">Checkout</h1>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 bg-white shadow p-6 rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Billing Details</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input placeholder="Full name" class="border p-2 rounded" />
+            <input placeholder="Email" class="border p-2 rounded" />
+            <input
+              placeholder="Address"
+              class="border p-2 rounded md:col-span-2"
+            />
+            <input placeholder="City" class="border p-2 rounded" />
+            <input placeholder="Postal code" class="border p-2 rounded" />
+          </div>
+
+          <h2 class="text-xl font-semibold mt-6 mb-4">Payment Info</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input placeholder="Card number" class="border p-2 rounded" />
+            <input placeholder="CVV" class="border p-2 rounded" />
+            <input placeholder="Expiry (MM/YY)" class="border p-2 rounded" />
+          </div>
+        </div>
+
+        <div class="bg-white shadow p-6 rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
+          <div id="checkoutSummary" class="space-y-2 text-sm"></div>
+          <hr class="my-4" />
+          <div class="flex justify-between text-lg font-semibold">
+            <span>Total:</span>
+            <span id="checkoutTotal">$0.00</span>
+          </div>
+          <button
+            id="placeOrder"
+            class="w-full mt-6 bg-blue-600 text-white py-3 rounded hover:bg-blue-700"
+          >
+            Place Order
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/checkout.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
